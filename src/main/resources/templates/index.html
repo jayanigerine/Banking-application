@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+<body>
+<h1>Welcome to SpringBoot Thymeleaf Banking App></h1>
+<form th:action="customerbyAccno" th:method="post" th:object="${customer}">
+  <label for="cusAccno">Account Number</label><br>
+  <input type="text" th:field="*{cusAccno}"><br>
+
+ <button type="submit">Submit</button><br>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+
+<h1 th:text="Hello"></h1>
+
+<form th:action="withdraw" th:method="post" th:object="${form2dto}"><br>
+
+<label for="cusAccno">Account Number</label><br>
+    <input type="text" th:field="*{cusAccno}"><br>
+
+    <label for="cus_name">Customer Name</label><br>
+    <input type="text" th:field="${form2dto.cusName}"><br>
+
+    <label for="bal">Customer Balance</label><br>
+    <input type="text" th:field="${form2dto.balance}"><br>
+
+   <label for="amount">Amount to Withdraw</label><br>
+    <input type="text" th:field="*{form2dto.amount}"><br>
+
+    <button type="submit">Submit</button><br>
+
+</form>
+
+</body>
+</html>
